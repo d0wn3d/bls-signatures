@@ -21,8 +21,7 @@ extern "C" {
 /**
  * Maps a byte array to a point in an elliptic curve over a quadratic extension.
  *
- * Called ep2_map() in old relic version, _legacy prefix is to avoid duplicated
- * symbols
+ * Called ep2_map() in old relic version, _legacy prefix is to avoid duplicated symbols
  *
  * @param[out] p			- the result.
  * @param[in] msg			- the byte array to map.
@@ -30,4 +29,4 @@ extern "C" {
  */
 void ep2_map_legacy(ep2_t p, const uint8_t *msg, int len);
 
-#endif // #define SRC_LEGACY_HPP_
+#endif  // #define SRC_LEGACY_HPP_

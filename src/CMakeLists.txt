@@ -7,7 +7,7 @@ include(FetchContent)
 if (DEFINED ENV{RELIC_MAIN})
   set(RELIC_GIT_TAG "origin/main")
 else ()
-  set(RELIC_GIT_TAG "1885ae3b681c423c72b65ce1fe70910142cf941c")
+  set(RELIC_GIT_TAG "3a23142be0a5510a3aa93cd6c76fc59d3fc732a5")
 endif ()
 
 message(STATUS "Relic will be built from: ${RELIC_GIT_TAG}")
@@ -39,7 +39,10 @@ add_library(bls-gobyte ${CMAKE_CURRENT_SOURCE_DIR}/privatekey.cpp)
 add_library(blstmp ${HEADERS}
   ${CMAKE_CURRENT_SOURCE_DIR}/privatekey.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/bls.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/chaincode.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/elements.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/extendedprivatekey.cpp
+  ${CMAKE_CURRENT_SOURCE_DIR}/extendedpublickey.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/legacy.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/schemes.cpp
   ${CMAKE_CURRENT_SOURCE_DIR}/threshold.cpp
